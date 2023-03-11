@@ -15,9 +15,9 @@ def color(colors):
 
 def my_Portfolio():
     api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=100&convert=USD&CMC_PRO_API_KEY=4e41ec18-400c-4a8c-816d-253bb4184735")
-    api = json.loads(api_request.content)  # These lines send a GET request to the CoinMarketCap API to retrieve the latest market data
+    api = json.loads(api_request.content)                                                                 # These lines send a GET request to the CoinMarketCap API to retrieve the latest market data
 
-    coins = [                                                                   #This creates a list called coins containing two dictionaries
+    coins = [                                                                                            #This creates a list called coins containing two dictionaries
         {
             "symbol": "BTC",
             "coin_owned": 2,
@@ -45,7 +45,7 @@ def my_Portfolio():
         }
     ]
 
-    total_pl = 0                                                        #This initializes a variable total_pl to zero
+    total_pl = 0                                                                                                             #This initializes a variable total_pl to zero
     roww = 1
     total_current_value = 0
     total_amount_value = 0

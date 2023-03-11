@@ -1,23 +1,22 @@
 from tkinter import *
-import requests                                                     #These lines import the necessary Python modules requests and json.
-import json                                                         #These lines import the necessary Python modules requests and json.
-
+import requests                                                                                           #These lines import the necessary Python modules requests and json.
+import json                                                                                                  #These lines import the necessary Python modules requests and json.
 
 pf = Tk()
-pf.title("First Project")                                             #using title method
+pf.title("First Project")                                                                                            #using title method
 
 
-def color(colors):
-    if colors > 0:
+def color(colors):                                                                                                   #colors function
+    if colors > 0 
         return "green"
     else:
         return "red"
 
-def my_Portfolio():
+def my_Portfolio():                                                                                                  #function
     api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=100&convert=USD&CMC_PRO_API_KEY=4e41ec18-400c-4a8c-816d-253bb4184735")
-    api = json.loads(api_request.content)                                                                 # These lines send a GET request to the CoinMarketCap API to retrieve the latest market data
+    api = json.loads(api_request.content)                                                                             # These lines send a GET request to the CoinMarketCap API to retrieve the latest market data
 
-    coins = [                                                                                            #This creates a list called coins containing two dictionaries
+    coins = [                                                                                                          #This creates a list called coins containing two dictionaries
         {
             "symbol": "BTC",
             "coin_owned": 2,
